@@ -12,7 +12,6 @@ function App() {
       const usersResponse = await getUser();
       const usersData = usersResponse.data;
       setUsers(usersData);
-      console.log(usersData)
     }
     fetchUsers();
   }, []);

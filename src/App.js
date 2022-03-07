@@ -20,7 +20,7 @@ function App() {
   }, []);
   return (
     <div className="container ">
-      <div className="grid gap-4 grid-cols-2 grid-rows-5">
+      <div className="grid  grid-cols-1 md:grid-cols-2 grid-rows-5">
         <div className="contents">
         {!isProfileMode && users && users.map(({title, firstName, lastName, picture}, userIndex) => (
           <UserCard onClick={() => {setSelectedUserId(userIndex); setIsProfileMode(true)}} key={`user-${userIndex}`} title={title} firstName={firstName} lastName={lastName} picture={picture} />

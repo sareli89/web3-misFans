@@ -12,7 +12,7 @@ function App() {
     <div className="container">
       <div className="grid gap-4 grid-cols-2 grid-rows-5">
       
-        <div class="contents">
+        <div className="contents">
         <UserCard 
           title='Mr ' 
           firstName="Luis " 

@@ -9,31 +9,31 @@ function App() {
     getUser();
   }, []);
   return (
-    <div>
-          <h1 className="text-5xl font-bold underline">
-      tailwind test!
-    </h1>
-
-      <header>
+    <div className="container">
+      <div className="grid gap-4 grid-cols-2 grid-rows-5">
+      
+        <div class="contents">
         <UserCard 
-        title='Mr' 
-        firstName="Luis" 
-        lastName="Lopez"
-        picture="https://randomuser.me/api/portraits/men/30.jpg"
-        />
-        <UserCard
-        title='Mr' 
-        firstName="Luis" 
-        lastName="Lopez"
-        picture="https://randomuser.me/api/portraits/men/30.jpg"
-        />
-        <UserCard
-        title='Mr' 
-        firstName="Luis" 
-        lastName="Lopez"
-        picture="https://randomuser.me/api/portraits/men/30.jpg"
-        />
-      </header>
+          title='Mr ' 
+          firstName="Luis " 
+          lastName="Lopez"
+          picture="https://randomuser.me/api/portraits/men/30.jpg"
+          />
+          <UserCard 
+          title='Mr ' 
+          firstName="Luis " 
+          lastName="Lopez"
+          picture="https://randomuser.me/api/portraits/men/30.jpg"
+          />
+          <UserCard 
+          title='Mr ' 
+          firstName="Luis " 
+          lastName="Lopez"
+          picture="https://randomuser.me/api/portraits/men/30.jpg"
+          />
+        </div>
+      </div>
+          
     </div>
   );
 }

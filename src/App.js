@@ -16,7 +16,7 @@ function App() {
     fetchUsers();
   }, []);
   return (
-    <div className="container">
+    <div className="container ">
       <div className="grid gap-4 grid-cols-2 grid-rows-5">
         <div className="contents">
         {users && users.map(({title, firstName, lastName, picture}, userIndex) => (

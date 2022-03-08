@@ -17,3 +17,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.card {
+  width: 450px;
+  height: 150px;
+}
+
+.profile {
+  background-color: black;
+}

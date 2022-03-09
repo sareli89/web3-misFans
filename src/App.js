@@ -24,7 +24,7 @@ function App() {
     <div >
       <Nav />
       <div className="grid  grid-cols-1 md:grid-cols-1 grid-rows-10 place-items-center h-screen">
-        <div className="contents">
+        <div className="contents ">
         {!isProfileMode && users && users.map(({title, firstName, lastName, picture}, userIndex) => (
           <UserCard onClick={() => {setSelectedUserId(userIndex); setIsProfileMode(true)}} key={`user-${userIndex}`} title={title} firstName={firstName} lastName={lastName} picture={picture} />
         ))}

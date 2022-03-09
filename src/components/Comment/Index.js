@@ -1,5 +1,6 @@
 export const CommentCard ( props ) => {
     const { ownwer, message, likes } = props
+    const `{likes}`
     return (
     <div>
         <div className='comCard'>

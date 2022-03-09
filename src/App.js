@@ -24,9 +24,8 @@ function App() {
     
     <div >
       <Nav />
-      <div className="">
-        <SearchBar />
-      </div>
+      
+      <SearchBar />
       
       <div className="grid  grid-cols-1 md:grid-cols-1 grid-rows-10 place-items-center h-screen">
         <div className="contents ">

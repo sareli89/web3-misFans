@@ -1,12 +1,12 @@
-import './App.css';
-import { UserCard } from './components/UserCard'
-import {UserProfile} from './components/UserProfile'
-import { getUser } from './utils/fetching';
-import { useEffect } from 'react';
-import './index.css';
-import React from 'react';
-import { Nav } from './components/Nav';
-import { SearchBar } from './components/SearchBar'
+import "./App.css";
+import { UserCard } from "./components/UserCard";
+import { UserProfile } from "./components/UserProfile";
+import { getUser } from "./utils/fetching";
+import { useEffect } from "react";
+import "./index.css";
+import React from "react";
+import { Nav } from "./components/Nav";
+import { SearchBar } from "./components/SearchBar";
 
 function App() {
   const [users, setUsers] = React.useState([]);
@@ -21,21 +21,33 @@ function App() {
     fetchUsers();
   }, []);
   return (
-    
-    <div >
+    <div>
       <Nav />
-      
+
       <SearchBar />
-      
+
       <div className="grid  grid-cols-1 md:grid-cols-1 grid-rows-10 place-items-center h-screen">
         <div className="contents ">
-        {!isProfileMode && users && users.map(({title, firstName, lastName, picture}, userIndex) => (
-          <UserCard onClick={() => {setSelectedUserId(userIndex); setIsProfileMode(true)}} key={`user-${userIndex}`} title={title} firstName={firstName} lastName={lastName} picture={picture} />
-        ))}
-        {isProfileMode && users && <UserProfile user={users[selectedUserId]} />}
+          {!isProfileMode &&
+            users &&
+            users.map(({ title, firstName, lastName, picture }, userIndex) => (
+              <UserCard
+                onClick={() => {
+                  setSelectedUserId(userIndex);
+                  setIsProfileMode(true);
+                }}
+                key={`user-${userIndex}`}
+                title={title}
+                firstName={firstName}
+                lastName={lastName}
+                picture={picture}
+              />
+            ))}
+          {isProfileMode && users && (
+            <UserProfile user={users[selectedUserId]} />
+          )}
         </div>
       </div>
-          
     </div>
   );
 }

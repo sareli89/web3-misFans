@@ -9,5 +9,5 @@ export const CommentCard ( props ) => {
             <tag /> <span className="fas fa-heart">{likes}</span>
         </div>
     </div>
-    )
+    ) 
 }

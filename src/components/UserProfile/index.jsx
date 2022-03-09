@@ -5,6 +5,7 @@ export  const UserProfile = ({user: {picture, firstName}}) => {
     return (
         <React.Fragment>
             <div className="  bg-black ">
+            
                 <div className="flex items-center">
                     <img width="90" className="rounded-full  border-solid md:border-double border-4 border-purple-300" src={picture} alt={profilePhotoAlt}/>
                     <h2 className="text-white text-xl font-semibold mx-8 ">Hola, soy {firstName}</h2>

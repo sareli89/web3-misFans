@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import './index.css';
 import React from 'react';
 import { Nav } from './components/Nav';
+import { SearchBar } from './components/SearchBar'
 
 function App() {
   const [users, setUsers] = React.useState([]);
@@ -23,6 +24,10 @@ function App() {
     
     <div >
       <Nav />
+      <div className="">
+        <SearchBar />
+      </div>
+      
       <div className="grid  grid-cols-1 md:grid-cols-1 grid-rows-10 place-items-center h-screen">
         <div className="contents ">
         {!isProfileMode && users && users.map(({title, firstName, lastName, picture}, userIndex) => (

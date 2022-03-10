@@ -1,12 +1,13 @@
 export const CommentCard ( props ) => {
     const { ownwer, message, likes } = props
-    const `{likes}`
+    const commentLikes = `${likes}`
     return (
     <div>
-        <div className='comCard'>
+        <div className='commentCard'>
             <h3>{ownwer}</h3>
             <span>{message}</span>
-            <tag /> <span className="fas fa-heart">{likes}</span>
+            <tag></tag>
+            <span className="fas fa-heart">{commentLikes}</span>
         </div>
     </div>
     ) 

@@ -23,6 +23,11 @@ code {
   height: 150px;
 }
 
+.commentCard {
+  margin-top:5rem;
+  max-width:50%;
+}
+
 .profile {
   background-color: black;
 }

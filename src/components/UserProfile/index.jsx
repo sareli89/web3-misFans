@@ -15,7 +15,7 @@ export const UserProfile = ({ user: { id, picture, firstName } }) => {
   }, []);
   return (
     <div className="  bg-black ">
-      <div className="flex items-center">
+      <div className="flex items-center ">
         <img
           width="90"
           className="rounded-full  border-solid md:border-double border-4 border-purple-300"
@@ -33,20 +33,24 @@ export const UserProfile = ({ user: { id, picture, firstName } }) => {
             key={`comment-${commentIndex}`}
             className="flex justify-center my-8 card"
           >
-            <div className="block p-6 rounded-lg shadow-lg border hover:border-doted border-fuchsia-50 bg-purple-400  max-w-sm">
-              <img
-                width="40"
-                className="rounded-full m-2"
-                src={picture}
-                alt={profilePhotoAlt}
-              />
-              <h5 className="font-mono text-gray-900 text-2xl leading-tight font-medium mb-2">
-                {owner.firstName}
-              </h5>
-              <p className="font-mono text-gray-700 text-base mb-4">
-                {message}
-              </p>
+            <div className="block p-4 border hover:border-doted border-fuchsia-50   bg-purple-400  rounded-lg m-2 card ">
+              <div className="flex items-center "> 
+                <img
+                    width="40"
+                    className="rounded-full m-2"
+                    src={picture}
+                    alt={profilePhotoAlt}
+                  />
+                  <h5 className="font-mono text-gray-900 text-2xl leading-tight font-medium mx-7 mb-2">
+                    {owner.firstName}
+                  </h5>
+              </div>
+              
+                <p className="font-mono text-lg text-gray-700 m-4">
+                  {message}
+                </p>
             </div>
+           
           </div>
         ))}
     </div>

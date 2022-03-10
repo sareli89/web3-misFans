@@ -23,31 +23,33 @@ function App() {
   return (
     <div>
       <Nav />
+      <div className="">
+        <SearchBar />
 
-      <SearchBar />
-
-      <div className="grid  grid-cols-1 md:grid-cols-1 grid-rows-10 place-items-center h-screen">
-        <div className="contents ">
-          {!isProfileMode &&
-            users &&
-            users.map(({ title, firstName, lastName, picture }, userIndex) => (
-              <UserCard
-                onClick={() => {
-                  setSelectedUserId(userIndex);
-                  setIsProfileMode(true);
-                }}
-                key={`user-${userIndex}`}
-                title={title}
-                firstName={firstName}
-                lastName={lastName}
-                picture={picture}
-              />
-            ))}
-          {isProfileMode && users && (
-            <UserProfile user={users[selectedUserId]} />
-          )}
+        <div className="grid  grid-cols-1 md:grid-cols-1 grid-rows-10 place-items-center h-screen">
+          <div className="contents ">
+            {!isProfileMode &&
+              users &&
+              users.map(({ title, firstName, lastName, picture }, userIndex) => (
+                <UserCard
+                  onClick={() => {
+                    setSelectedUserId(userIndex);
+                    setIsProfileMode(true);
+                  }}
+                  key={`user-${userIndex}`}
+                  title={title}
+                  firstName={firstName}
+                  lastName={lastName}
+                  picture={picture}
+                />
+              ))}
+            {isProfileMode && users && (
+              <UserProfile user={users[selectedUserId]} />
+            )}
+          </div>
         </div>
       </div>
+      
     </div>
   );
 }

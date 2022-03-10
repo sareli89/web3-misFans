@@ -3,7 +3,7 @@ export const Nav = () => {
     <nav className="flex items-center justify-between flex-wrap bg-black p-6 border-b-4  border-purple-700">
       <div className="flex items-center flex-shrink-0 text-white font-extrabold mr-6">
         <span className="font-semibold font-mono text-xl tracking-tight">
-          Mis Fans
+          Web 3
         </span>
       </div>
 

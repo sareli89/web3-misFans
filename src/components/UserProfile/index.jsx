@@ -14,11 +14,11 @@ export const UserProfile = ({ user: { id, picture, firstName } }) => {
     getUserComments();
   }, []);
   return (
-  <div className="bg-gray-800 rounded p-10 ">
-  
-    <div className="flex items-center ">
-      <img
-        width="90"
+  <div className="container mx-auto">
+    <div className="bg-gray-800 rounded p-10 ">
+      <div className="flex items-center ">
+        <img
+        width="w-32"
         className="rounded-full md:w-28 border-solid md:border-double border-4 border-purple-300"
         src={picture}
         alt={profilePhotoAlt}
@@ -26,36 +26,31 @@ export const UserProfile = ({ user: { id, picture, firstName } }) => {
       <h2 className="text-white text-3xl font-bold mx-8 ">
         Hola, soy {firstName}
       </h2>
-    </div>
-      
-      
-
-    {comments &&
-      comments.map(({ message, owner }, commentIndex) => (
-        <div
-          key={`comment-${commentIndex}`}
-          className="flex justify-center my-8"
-        >
-          <div className="block p-4 border hover:border-doted border-fuchsia-50  bg-purple-400  rounded-lg m-2 card ">
-            <div className="flex items-center "> 
-              <img
-                  width="40"
-                  className="rounded-full md:w-14 m-2"
-                  src={picture}
-                  alt={profilePhotoAlt}
-                />
-                <h5 className="font-mono text-gray-900 text-2xl leading-tight font-medium mx-7 mb-2">
-                  {owner.firstName}
-                </h5>
+      </div>
+      {comments &&
+        comments.map(({ message, owner }, commentIndex) => (
+          <div
+            key={`comment-${commentIndex}`}
+          >
+            <div className="block p-4 border  border-fuchsia-50  bg-purple-400  rounded-lg m-2  ">
+              <div className="flex items-center "> 
+                <img
+                    width="40"
+                    className="rounded-full md:w-14 m-2"
+                    src={picture}
+                    alt={profilePhotoAlt}
+                  />
+                  <h5 className="font-mono text-gray-900 text-2xl leading-tight font-medium mx-7 mb-2">
+                    {owner.firstName}
+                  </h5>
+              </div>
+                <p className="font-mono text-lg text-gray-700 m-4">
+                  {message}
+                </p>
             </div>
-            
-              <p className="font-mono text-lg text-gray-700 m-4">
-                {message}
-              </p>
           </div>
-          
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };

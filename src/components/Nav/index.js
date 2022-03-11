@@ -1,8 +1,12 @@
 export const Nav = () => {
+  function goBackToMain(){
+    document.getElementById("goBack").innerHTML ="I'm back!"
+  }
+  document.getElementById("goBack")
   return (
     <nav className="flex items-center justify-between flex-wrap bg-black p-6 border-b-4  border-purple-700">
       <div className="flex items-center flex-shrink-0 text-white font-extrabold mr-6">
-        <span className="font-semibold font-mono text-xl tracking-tight">
+        <span className="font-semibold font-mono text-xl tracking-tight" id="goBack">
           Web 3
         </span>
       </div>

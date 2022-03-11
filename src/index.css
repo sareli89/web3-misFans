@@ -19,13 +19,13 @@ code {
 }
 
 .card {
-  width: 450px;
-  height: 150px;
+  max-width:75%;
 }
 
 .commentCard {
   margin-top:5rem;
   max-width:50%;
+
 }
 
 .profile {

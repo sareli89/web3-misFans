@@ -1,8 +1,8 @@
 export const UserCard = ({ title, firstName, lastName, picture, onClick }) => {
   const fullName = `${firstName} ${lastName}`;
   return (
-    <div>
-      <div className="container mx-auto bg-gray-800 rounded p-10 ">
+    <div className="container mx-auto">
+      <div className=" bg-gray-800 p-10 ">
         <div
         onClick={onClick}
         className="flex items-center  shadow-lg shadow-indigo-500/50 border hover:border-doted border-fuchsia-50   bg-purple-400  rounded-lg p-4 mx-4 my-2 card "

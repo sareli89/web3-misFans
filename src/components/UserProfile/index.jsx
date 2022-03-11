@@ -19,7 +19,7 @@ export const UserProfile = ({ user: { id, picture, firstName } }) => {
     <div className="flex items-center ">
       <img
         width="90"
-        className="rounded-full md:w-36 border-solid md:border-double border-4 border-purple-300"
+        className="rounded-full md:w-28 border-solid md:border-double border-4 border-purple-300"
         src={picture}
         alt={profilePhotoAlt}
       />

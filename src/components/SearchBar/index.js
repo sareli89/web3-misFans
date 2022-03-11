@@ -1,15 +1,22 @@
 export const SearchBar = () => {
   return (
     <div className="flex justify-center">
-      <div className="input-group relative flex  items-stretch   mt-8 mb-8 w-96">
+      <div className="input-group relative flex  items-stretch   mt-8 mb-8 w-4/5 md:w-4/5">
         <input
           type="search"
-          className="input-group min-w-0 block w-full px-3 py-1.5 font-mono border border-solid border-gray-300 rounded-l-lg transition ease-in-out m-0 focus:text-gray-100 focus:bg-white focus:border-purple-600 focus:outline-none"
+          className="input-group min-w-0 block w-full px-3 py-1.5 
+          font-mono border border-solid border-gray-300 rounded-l-lg 
+          transition ease-in-out m-0 focus:text-gray-100 focus:bg-white focus:border-purple-600 focus:outline-none"
           placeholder="Search"
           aria-label="Search"
         ></input>
         <button
-          className="btn px-6 py-3.5 bg-purple-600 text-white font-medium text-xs leading-tight uppercase rounded-r-lg shadow-md hover:bg-purple-400 hover:shadow-lg focus:bg-purple-700  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-300 active:shadow-lg transition duration-150 ease-in-out flex items-center"
+          className="btn px-6 py-3.5 bg-purple-600 
+          text-white font-medium text-xs leading-tight uppercase rounded-r-lg 
+          shadow-md hover:bg-purple-400 hover:shadow-lg 
+          focus:bg-purple-700  focus:shadow-lg focus:outline-none focus:ring-0 
+          active:bg-purple-300 active:shadow-lg transition duration-150 ease-in-out 
+          flex items-center"
           type="button"
           id="button-addon2"
         >

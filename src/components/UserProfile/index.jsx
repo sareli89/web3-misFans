@@ -16,10 +16,9 @@ export const UserProfile = ({ user: { id, picture, firstName } }) => {
   return (
   <div className="container mx-auto">
     <div className="bg-gray-800 rounded p-10 ">
-      <div className="flex items-center ">
+      <div className="flex items-center justify-center mb-8 md:w-2/4">
         <img
-        width="w-32"
-        className="rounded-full md:w-28 border-solid md:border-double border-4 border-purple-300"
+        className="rounded-full w-12 md:w-28 border-solid md:border-double border-4 border-purple-300 mb-6"
         src={picture}
         alt={profilePhotoAlt}
       />
@@ -27,16 +26,19 @@ export const UserProfile = ({ user: { id, picture, firstName } }) => {
         Hola, soy {firstName}
       </h2>
       </div>
-      {comments &&
+      <div className="flex-col items-center justify-center">
+        {comments &&
         comments.map(({ message, owner }, commentIndex) => (
           <div
             key={`comment-${commentIndex}`}
           >
-            <div className="block p-4 border  border-fuchsia-50  bg-purple-400  rounded-lg m-2  ">
-              <div className="flex items-center "> 
+            <div className="block p-4 m-12  
+            border rounded-lg border-fuchsia-300 bg-purple-400 
+            shadow-lg shadow-indigo-500/50 ">
+              <div className="flex items-center"> 
                 <img
                     width="40"
-                    className="rounded-full md:w-14 m-2"
+                    className="rounded-full border border-fuchsia-300 md:w-28 m-2"
                     src={picture}
                     alt={profilePhotoAlt}
                   />
@@ -50,6 +52,8 @@ export const UserProfile = ({ user: { id, picture, firstName } }) => {
             </div>
           </div>
         ))}
+      </div>
+      
       </div>
     </div>
   );

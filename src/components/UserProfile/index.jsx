@@ -22,7 +22,7 @@ export const UserProfile = ({ user: { id, picture, firstName } }) => {
         src={picture}
         alt={profilePhotoAlt}
       />
-      <h2 className="text-white text-3xl font-bold mx-8 ">
+      <h2 className="text-white text-3xl font-bold mx-8 motion-safe:animate-bounce">
         Hola, soy {firstName}
       </h2>
       </div>
@@ -32,19 +32,17 @@ export const UserProfile = ({ user: { id, picture, firstName } }) => {
           <div
             key={`comment-${commentIndex}`}
           >
-            <div className="block p-4 m-12  
-            border rounded-lg border-fuchsia-300 bg-purple-400 
-            shadow-lg shadow-indigo-500/50 ">
-              <div className="flex items-center"> 
+            <div className="flex items-center justify-center  p-4 m-12  
+              border rounded-lg border-fuchsia-300 bg-purple-400 
+              shadow-lg shadow-indigo-500/50 ">
+              <div className="flex-col items-center "> 
                 <img
                     width="40"
                     className="rounded-full border border-fuchsia-300 md:w-28 m-2"
                     src={picture}
                     alt={profilePhotoAlt}
                   />
-                  <h5 className="font-mono text-gray-900 text-2xl leading-tight font-medium mx-7 mb-2">
-                    {owner.firstName}
-                  </h5>
+                  
               </div>
                 <p className="font-mono text-lg text-gray-700 m-4">
                   {message}

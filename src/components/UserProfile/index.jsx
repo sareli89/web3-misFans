@@ -37,8 +37,7 @@ export const UserProfile = ({ user: { id, picture, firstName } }) => {
               shadow-lg shadow-indigo-500/50 ">
               <div className="flex-col items-center "> 
                 <img
-                    width="40"
-                    className="rounded-full border border-fuchsia-300 md:w-28 m-2"
+                    className="rounded-full border border-fuchsia-300 w-18 md:w-28"
                     src={picture}
                     alt={profilePhotoAlt}
                   />
